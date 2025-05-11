@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanaditya - Be a Light</title>
+  <link rel="icon" type="image/png" href="Asset/logo.png" />
+  <link rel="stylesheet" href="contact-us.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Kanaditya Logo" />
+      </div>
+      <button class="hamburger">&#9776;</button> 
+      <nav class="navbar">
+        <ul>
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="volunteer.html">Join Volunteers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-left">
+        <p class="contact-label">CONNECT WITH US</p>
+        <h1>We'd love to hear<br>from you</h1>
+        <p class="contact-description">
+          Have any question in mind or want to enquire? Please feel free to contact us through the form or the following details.
+        </p>
+      </div>
+
+      <div class="contact-right">
+        <div class="contact-block">
+          <h3>Let's talk!</h3>
+          <p>
+            <a href="https://wa.me/628155089388" target="_blank" class="contact-link">
+              +62 815-5089-388
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-block">
+          <h4>Headoffice</h4>
+          <p>
+            <a href="https://www.google.com/maps?q=Jl.+Zamrud+I+No.+6,+Ubung+Kaja,+Denpasar,+Bali" target="_blank" class="contact-link">
+              Jl. Zamrud I No. 6, Ubung Kaja, Denpasar<br>Bali.
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-socials">
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-form-section">
+    <form class="contact-form" id="contactForm" onsubmit="return showPopup();">
+      <div class="form-row">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+      </div>
+      <div class="form-row">
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Subject" required>
+      </div>
+      <textarea placeholder="Your Wish" rows="5" required></textarea>
+      <button id="submit">Send message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <div class="social-item">
+        <a href="contact-us.html" class="contact-heading">Connect with Us</a>
+      </div>
+
+      <div class="social-item">
+        <a href="https://wa.me/628155089388" target="_blank" aria-label="WhatsApp">
+          <img src="whatsapp-icon.png" alt="WhatsApp" />
+        </a>
+        <p class="social-text">+62 815-5089-388</p>
+      </div>
+
+      <div class="social-item">
+        <a href="https://instagram.com/komunitaskanaditya" target="_blank" aria-label="Instagram">
+          <img src="instagram-icon.png" alt="Instagram" />
+        </a>
+        <p class="social-text">@komunitaskanaditya</p>
+      </div>
+
+      <div class="social-item">
+        <a href="mailto:kanaditya.bali@gmail.com" target="_blank" aria-label="Email">
+          <img src="email-icon.png" alt="Email" />
+        </a>
+        <p class="social-text">kanaditya.bali@gmail.com</p>
+      </div>
+    </div>
+
+    <hr class="footer-line" />
+
+    <div class="footer-bottom">
+      <img src="logo.png" alt="Kanaditya Logo" class="footer-kanaditya-logo" />
+      <p class="copyright">
+        &copy; 2025 Kanaditya. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <div id="popupModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <p>Thank you for connecting with us,<br>we will reply to you shortly.</p>
+    </div>
+  </div>
+
+  <script>
+    function showPopup() {
+      const modal = document.getElementById("popupModal");
+      modal.style.display = "flex";
+
+      // Auto-close after 3 seconds
+      setTimeout(() => {
+        closePopup();
+      }, 3000);
+
+      return false; // Prevent actual form submission
+    }
+
+    function closePopup() {
+      const modal = document.getElementById("popupModal");
+      modal.style.display = "none";
+      document.getElementById("contactForm").reset();
+    }
+  </script>
+</body>
+</html>

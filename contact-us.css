@@ -1,0 +1,478 @@
+ *{
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #FEFDF2;
+  color: #000000;
+}
+
+header {
+  padding: 20px 40px;
+  background: #FEFDF2;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #7a562f;
+  cursor: pointer;
+}
+
+/* === NAV MENU === */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #7a562f;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  color: #e85d04;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-section {
+  background-color: #FBB829;
+  padding: 60px 40px;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-left {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.contact-right {
+  flex: 1 1 40%;
+  max-width: 40%;
+}
+
+.contact-label {
+  text-transform: uppercase;
+  color: #a8511d;
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.contact-label::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background-color: #a8511d;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.contact-left h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+}
+
+.contact-description {
+  font-size: 14px;
+  color: #333;
+  max-width: 90%;
+}
+
+.contact-block h3,
+.contact-block h4 {
+  margin-bottom: 5px;
+  color: #1a1a1a;
+}
+
+.contact-block p {
+  color: #444;
+  margin: 0 0 20px;
+  font-size: 14px;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-link {
+  color: #7A4720;
+  text-decoration: none;
+  transition: font-weight 0.2s ease;
+}
+
+.contact-link:hover {
+  font-weight: 600; 
+}
+
+
+.circle {
+  width: 18px;
+  height: 18px;
+  background-color: #7A4720;
+  border-radius: 50%;
+}
+
+.contact-form-section {
+  background-color: #FEFDF2;
+  padding: 40px 20px;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  background-color: #FEFDF2;
+  color: #000;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  width: fit-content;
+  align-self: center;
+  padding: 10px 20px;
+  background-color: #e85d04;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #cf4f00;
+}
+
+.footer {
+  background-color: #FCB729;
+  padding: 20px 0 15px;
+  color: #7A4720;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7A4720;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+
+.contact-heading:hover {
+  color: #5c3016;
+  text-decoration: underline;
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px; 
+  margin-bottom: 10px;
+}
+
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social-item img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.social-text {
+  font-size: 13px;
+  color: #7A4720;
+  margin: 0;
+}
+
+
+.footer-line {
+  border: none;
+  height: 1px;
+  background-color: #7A4720;
+  width: 50%;
+  margin: 10px auto;
+}
+
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: nowrap;
+}
+
+.footer-kanaditya-logo {
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+footer p {
+  font-size: 13px;
+  color: #7A4720;
+  margin: 0;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+    .hamburger {
+        display: block;
+        position: relative;
+        margin-left: 150px;
+    }
+
+    .logo {
+        position: relative;
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #FEFDF2;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 10px 20px;
+        border-top: 1px solid #ccc;
+        z-index: 999;
+        gap: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+
+    nav ul.show {
+        display: flex;
+    }
+
+        nav ul li {
+        text-align: left;
+    }
+
+    .contact-form-section {
+        padding: 20px 40px;
+    }
+
+    .contact-form {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row input {
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+
+  .social-item img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social-text {
+    font-size: 13px;
+  }
+
+  .contact-heading {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .footer-line {
+    width: 80%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .footer-kanaditya-logo {
+    height: 40px;
+  }
+
+  footer p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  
+}
+
+/* Popup Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #222;
+  animation: fadeIn 0.4s ease-in-out;
+  max-width: 90%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 1.4rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #e74c3c;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+  .contact-form-section {
+    padding: 15px 20px;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row input,
+  textarea {
+    font-size: 0.9em;
+  }
+}
