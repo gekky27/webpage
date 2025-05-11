@@ -138,3 +138,57 @@
       width: 80px;
       height: auto;
     }
+    /* Hide checkbox */
+  #menu-toggle {
+    display: none;
+  }
+
+  /* Hamburger icon */
+  .hamburger {
+    font-size: 32px;
+    cursor: pointer;
+    display: none;
+    color: #4b2e17;
+  }
+
+  /* Nav menu styles */
+  nav.menu {
+    display: flex;
+    gap: 30px;
+  }
+
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
+    nav.menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 90px;
+      right: 20px;
+      background-color: #fffaf0;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    #menu-toggle:checked + .hamburger + nav.menu {
+      display: flex;
+    }
+
+    nav.menu a {
+      margin: 10px 0;
+      color: #4b2e17;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+
+    
+
+    

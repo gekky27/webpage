@@ -192,3 +192,44 @@
       width: 80px;
       height: auto;
     }
+
+    .menu-toggle {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: #4e2e1f;
+    }
+    
+    /* Default nav links */
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+    
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #fffaf0;
+        position: absolute;
+        top: 80px;
+        right: 40px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+      }
+    
+      .nav-links.active {
+        display: flex;
+      }
+    
+      .nav-links a {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+    }
+    
