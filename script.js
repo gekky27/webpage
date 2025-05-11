@@ -6,9 +6,9 @@ document.querySelector(".hamburger").addEventListener("click", function () {
 
 
 // Fungsi untuk tombol Donate
-document.getElementById("donateBtn").addEventListener("click", function () {
-    window.location.href = "donate.html"; // Ganti ke URL donasi yang sebenarnya jika ada
-  });
+document.getElementById("donateBtn").addEventListener("click", function() {
+  window.location.href = "index.html";
+});
   
   // Fungsi untuk semua tombol Learn More
   document.querySelectorAll(".card button").forEach(function (button) {
