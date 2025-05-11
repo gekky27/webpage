@@ -22,13 +22,16 @@
   </header>
 
   <div class="back-link">
-    <a href="#">&larr;   Register yourself with us</a>
+    <a href="#">&larr;   </a>
+    
   </div>
+
 
   <!-- Main Section -->
   <main class="container">
     <!-- Left: Info -->
     <section class="volunteer-info">
+      <h3>Register yourself with us</h3>
       <h1>Let’s Become Volunteers</h1>
       <div class="image-row">
         <div class="image-card"><img src="vol1.jpeg" alt="volunteer" style= "width:390px;height:243px;"></div>
@@ -62,7 +65,7 @@
   <!-- Testimonials -->
   <section class="testimonials">
     <h2>What They Say</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+    <p>Let's hear from our volunteer !</p>
     <div class="testimonial-row">
       <div class="testimonial-card">
         <div class="avatar">
@@ -138,6 +141,33 @@
       </p>
     </div>
   </footer>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="popup-close" onclick="closePopup()">&times;</span>
+      <h2>Thank you for registering!</h2>
+      <p>Your registration as a volunteer has been successfully submitted. We will contact you shortly.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Show the popup after form submission
+    function showPopup() {
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    // Close the popup
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    // Handle form submission
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting
+      showPopup(); // Show the success popup
+    });
+  </script>
 
 </body>
 </html>
