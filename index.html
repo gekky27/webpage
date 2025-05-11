@@ -136,6 +136,12 @@
         const donationForm = document.getElementById('donationForm');
         const popupOverlay = document.getElementById('popupOverlay');
         const closePopupButton = document.getElementById('closePopup');
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
 
         donationForm.addEventListener('submit', function(event) {
             event.preventDefault(); 
