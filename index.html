@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kanaditya Donation Page</title>
   <link rel="stylesheet" href="/donate.css">
-  
 </head>
 <body>
   <header>
@@ -26,36 +25,36 @@
     </div>
     <div class="donation-form-wrapper">
         <section class="donation-form">
-          <form action="https://tripay.id/api/transaction/create" method="POST" target="_blank">
+          <form id="donationForm">
             <h3>Choose an amount</h3>
             <div class="amount-options">
-              
+
               <label><input type="radio" name="amount" value="30"> $30</label>
               <label><input type="radio" name="amount" value="50"> $50</label>
               <label><input type="radio" name="amount" value="70"> $70</label>
               <label><input type="radio" name="amount" value="90"> $90</label>
               <label><input type="radio" name="amount" value="other"> others <input type="number" name="custom_amount" style="width:60px;margin-left:5px;"></label>
             </div>
-    
+
             <h3>Your information</h3>
             <input type="text" name="first_name" placeholder="First Name" required>
             <input type="text" name="last_name" placeholder="Last Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <input type="text" name="phone" placeholder="Phone Number" required>
             <textarea name="message" rows="4" placeholder="Your Wish"></textarea>
-    
+
             <h3>Payment method</h3>
-            <p> Account Name: Yayasan Kanaditya Anjani Dharma 
+            <p> Account Name: Yayasan Kanaditya Anjani Dharma
             <p></p>1450013246034 ( Bank Mandiri )</p>
             <select name="payment_method" required>
               <option value="">Select a payment method</option>
               <option value="MANDIRIVA">Mandiri</option>
               <option value="QRIS">QRIS</option>
-              
+
             </select>
-            
-            <button type="submit" class="submit-btn">Submit</button>
-            
+
+            <button type="submit" class="submit-btn">Donate</button>
+
           </form>
         </section>
       </div>
@@ -65,28 +64,28 @@
 
   <footer class="footer">
     <div class="social-icons">
-      
+
       <div class="social-item">
         <a href="contact-us.html" class="contact-heading">Connect with Us</a>
       </div>
-  
-     
+
+
       <div class="social-item">
         <a href="https://wa.me/628155089388" target="_blank" aria-label="WhatsApp">
           <img src="whatsapp.png" alt="WhatsApp" />
         </a>
         <p class="social-text">+62 815-5089-388</p>
       </div>
-  
-      
+
+
       <div class="social-item">
         <a href="https://instagram.com/komunitaskanaditya" target="_blank" aria-label="Instagram">
           <img src="instagram.png" alt="Instagram" />
         </a>
         <p class="social-text">@komunitaskanaditya</p>
       </div>
-  
-    
+
+
       <div class="social-item">
         <a href="mailto:kanaditya.bali@gmail.com" target="_blank" aria-label="Email">
           <img src="email.png" alt="Email" />
@@ -94,9 +93,9 @@
         <p class="social-text">kanaditya.bali@gmail.com</p>
       </div>
     </div>
-  
+
     <hr class="footer-line" />
-  
+
     <div class="footer-bottom">
       <img src="logokanaditya.png" alt="Kanaditya Logo" class="footer-kanaditya-logo" />
       <p class="copyright">
@@ -104,5 +103,51 @@
       </p>
     </div>
   </footer>
+
+  <div id="popupOverlay" class="popup-overlay hidden">
+    <div id="popupContainer" class="popup-container">
+        <div class="popup-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-.052z"/>
+            </svg>
+            <h2>Payment Succeed</h2>
+        </div>
+        <div class="popup-body">
+            <p>Payed on 11 May 2025 18.40 PM</p>
+            <div class="virtual-account-info">
+                <h4>Bank Mandiri</h4>
+                <div class="virtual-account-detail">
+                    <strong>Account Number</strong>
+                    <span>1450013246034</span>
+                </div>
+                <div class="virtual-account-detail">
+                    <strong>Total PAID</strong>
+                    <span class="amount">$30</span>
+                </div>
+            </div>
+        </div>
+        <button id="closePopup" class="close-button">Close</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const donationForm = document.getElementById('donationForm');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const closePopupButton = document.getElementById('closePopup');
+
+        donationForm.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            popupOverlay.classList.remove('hidden');
+            console.log('Donation form submitted (simulated)');
+        });
+
+        closePopupButton.addEventListener('click', function() {
+            popupOverlay.classList.add('hidden');
+            
+        });
+    });
+</script>
+
 </body>
 </html>

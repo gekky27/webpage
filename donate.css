@@ -228,4 +228,105 @@
       bottom: -120px;
     }
   }
-  
+
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.popup-header {
+    color: #28a745;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.popup-body {
+    margin-bottom: 20px;
+}
+
+.virtual-account-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.virtual-account-info h4 {
+    margin-top: 0;
+    color: #343a40;
+    margin-bottom: 8px;
+}
+
+.virtual-account-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.virtual-account-detail strong {
+    font-weight: bold;
+    color: #495057;
+}
+
+.amount {
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.payment-steps {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.payment-steps h4 {
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.payment-steps ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.payment-steps li {
+    margin-bottom: 8px;
+    color: #495057;
+}
+
+.close-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none !important;
+}
