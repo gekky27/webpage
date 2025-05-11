@@ -31,6 +31,6 @@ document.querySelectorAll(".play-button").forEach(function (button) {
 
 document.querySelectorAll(".join-btn").forEach(function (button) {
   button.addEventListener("click", function () {
-      window.location.href = "https://www.example.com"; // Ganti ke halaman yang diinginkan
+      window.location.href = "volunteer.html"; 
   });
 });
