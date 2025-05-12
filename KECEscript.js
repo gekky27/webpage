@@ -1,9 +1,8 @@
-// Placeholder script file if interactivity is needed
-// Currently no dynamic behavior required
+document.querySelector(".hamburger").addEventListener("click", function () {
+  document.querySelector("nav ul").classList.toggle("show");
+});
 
-// Example: Smooth scroll to top or back navigation could be added here
-
-document.querySelector('.back-button')?.addEventListener('click', function (e) {
+document.querySelector('.back-arrow')?.addEventListener('click', function (e) {
   e.preventDefault();
   history.back();
 });
