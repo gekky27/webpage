@@ -1,0 +1,287 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FEFDF2;
+  color: #7A4720;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background-color: #FEFDF2;
+  padding: 30px 40px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo {
+  height: 70px;
+}
+
+.back-button {
+  font-size: 24px;
+  color: #7A4720;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: background 0.2s;
+  border-radius: 5px;
+}
+
+.back-button:hover {
+  background-color: #f3e6d4;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #7a562f;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.header-nav a:hover {
+  color: #e85d04;
+}
+
+.header-character {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* TITLE SECTION */
+.title-section {
+  background-color: #FEFDF2;
+   padding: 20px 40px 40px; /* dikurangi padding atasnya agar konten naik */
+  margin-bottom: 30px;
+}
+
+.title-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.title-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: -10px;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #7A4720;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1em;
+  color: #000;
+  margin: 0;
+}
+
+.title-right img {
+  max-height: 220px;
+  object-fit: contain;
+}
+
+/* ABOUT SECTION */
+.about-program {
+  background-color: #FCB729;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.about-program h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #000;
+  letter-spacing: 2px;
+}
+
+.about-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px 50px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  width: 300px;
+  aspect-ratio: 4 / 3;
+  background-color: #fff;
+  box-shadow: 4px 4px 0 #d89d1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-description {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 0.95em;
+  color: #7A4720;
+  line-height: 1.7;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* SPACER */
+.section-spacer {
+  background-color: #FEFDF2;
+  height: 50px;
+  width: 100%;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #FCB729;
+  padding: 20px 0 15px;
+  color: #7A4720;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7A4720;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.contact-heading:hover {
+  color: #5c3016;
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social-item img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.social-text {
+  font-size: 13px;
+  color: #7A4720;
+  margin: 0;
+}
+
+.footer-line {
+  border: none;
+  height: 1px;
+  background-color: #7A4720;
+  width: 50%;
+  margin: 10px auto;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: nowrap;
+}
+
+.footer-kanaditya-logo {
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+footer p {
+  font-size: 13px;
+  color: #7A4720;
+  margin: 0;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .header-container,
+  .title-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .header-left,
+  .title-left {
+    align-items: center;
+  }
+
+  .header-character {
+    max-height: 140px;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .gallery-item {
+    width: 90%;
+  }
+}

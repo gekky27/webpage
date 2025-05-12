@@ -1,0 +1,266 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FEFDF2;
+  color: #7A4720;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+header {
+  height: 70px;
+  background: #FEFDF2;
+  display: flex;
+  justify-content: center;
+  padding: 40px 40px 0 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #7a562f;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  color: #e85d04;
+}
+/* TITLE SECTION */
+.title-section {
+  background-color: #FEFDF2;
+  padding: 40px;
+}
+
+.title-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.title-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.back-button {
+  font-size: 24px;
+  color: #7A4720;
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: background 0.2s;
+  margin-bottom: 4px; /* naikkan sedikit tombol ke atas */
+}
+
+
+.title {
+  font-size: 3em;
+  color: #7A4720;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1em;
+  color: #000;
+  margin: 0;
+}
+
+.title-right img {
+  max-height: 250px;
+  object-fit: contain;
+}
+
+
+
+/* ABOUT SECTION */
+.about-program {
+  background-color: #FCB729;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.about-program h2 {
+  font-size: 2em;
+  margin-bottom: 20px; /* dikurangi dari sebelumnya 35px */
+  color: #000;
+  letter-spacing: 2px;
+  margin-top: -10px; /* tambahan agar judul lebih naik */
+}
+
+
+.about-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px 50px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  width: 300px;
+  aspect-ratio: 4 / 3;
+  background-color: #fff;
+  box-shadow: 4px 4px 0 #d89d1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px; /* Tambahan margin antar item */
+}
+
+
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* atau use cover, jika mau penuh */
+  aspect-ratio: 4 / 3;
+
+}
+
+.about-description {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 0.95em;
+  color: #7A4720;
+  line-height: 1.7;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* SPACER */
+.section-spacer {
+  background-color: #FEFDF2;
+  height: 50px;
+  width: 100%;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #FCB729;
+  padding: 20px 0 15px;
+  color: #7A4720;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7A4720;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+
+.contact-heading:hover {
+  color: #5c3016;
+  text-decoration: underline;
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px; 
+  margin-bottom: 10px;
+}
+
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social-item img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.social-text {
+  font-size: 13px;
+  color: #7A4720;
+  margin: 0;
+}
+
+
+.footer-line {
+  border: none;
+  height: 1px;
+  background-color: #7A4720;
+  width: 50%;
+  margin: 10px auto;
+}
+
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: nowrap;
+}
+
+.footer-kanaditya-logo {
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+footer p {
+  font-size: 13px;
+  color: #7A4720;
+  margin: 0;
+  line-height: 1;
+}
+@media (max-width: 768px) {
+  .title-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title-left {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .title-right img {
+    max-height: 140px;
+    margin-top: 20px;
+  }
+}
