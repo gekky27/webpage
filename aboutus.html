@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
   <title>About Us - Kanaditya</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  * {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #fffdf3;
-    }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #FEFDF2;
+    color: #000000;
+  }
 
     header {
       padding: 20px 40px;
@@ -593,6 +595,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      color: #5c3016;
     }
 
     .social-item img {
@@ -660,14 +663,16 @@
     display: flex;
   }
 
-  .hamburger { 
-    display: block;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: #7a562f;
-    cursor: pointer;
-  }
+    .hamburger {
+      display: block;
+      margin-left: auto;
+      order: 3;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: #7a562f;
+      cursor: pointer;
+    }
 
   nav li {
     margin-bottom: 5px;
@@ -849,17 +854,17 @@
   <header>
       <div class="container">
         <div class="logo">
-          <img src="logokanaditya.png" alt="Kanaditya Logo" />
-        </div>
-        <button class="hamburger">&#9776;</button> 
+          <img src="Asset/logo.png" alt="Kanaditya Logo" />
+        </div> 
         <nav class="navbar">
           <ul>
-            <li><a href="Homepage.html" >Home</a></li>
-            <li><a href="community.html">Community</a></li>
-            <li><a href="aboutus.html"class="active">About Us</a></li>
-            <li><a href="volunteer.html">Join Volunteers</a></li>
+            <li><a href="Homepage.html" class="active">Home</a></li>
+            <li><a href="community1.html">Community</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="join-volunteers.html">Join Volunteers</a></li>
           </ul>
         </nav>
+        <button class="hamburger">&#9776;</button>
       </div>
     </header>
 
@@ -870,22 +875,22 @@
 
     <div class="photo-row">
       <div class="photo-box" style="width: 350px; height: 170px; border-radius: 16px;">
-        <img src="photo3.jpeg" alt="photo3" class="photo-img" />
+        <img src="asset/photo3.jpeg" alt="photo3" class="photo-img" />
       </div>
       <div class="photo-box" style="width: 200px; height: 200px; border-radius: 16px;">
-        <img src="photo6.jpeg" alt="photo6" class="photo-img" />
+        <img src="asset/photo6.jpeg" alt="photo6" class="photo-img" />
       </div>
       <div class="photo-box" style="width: 200px; height: 200px; border-radius: 50%;">
-        <img src="photo1.jpeg" alt="photo1" class="photo-img" />
+        <img src="asset/photo1.jpeg" alt="photo1" class="photo-img" />
       </div>
       <div class="photo-box" style="width: 140px; height: 200px; border-radius: 10px;">
-        <img src="photo4.jpeg" alt="photo4" class="photo-img" />
+        <img src="asset/photo4.jpeg" alt="photo4" class="photo-img" />
       </div>
       <div class="photo-box" style="width: 170px; height: 166px; border-radius: 30% 0;">
-        <img src="photo2.jpg" alt="photo2" class="photo-img" />
+        <img src="asset/photo2.jpg" alt="photo2" class="photo-img" />
       </div>
       <div class="photo-box" style="width: 195px; height: 170px; border-radius: 50%;">
-        <img src="photo7.jpeg" alt="photo7" class="photo-img" />
+        <img src="asset/photo7.jpeg" alt="photo7" class="photo-img" />
       </div>
     </div>
   </div>
@@ -909,7 +914,7 @@
   <section class="philosophy-wrapper">
       <div class="philosophy-content">
       <div class="philosophy-logo">
-       <img src="logokanaditya.jpeg" alt="Kanaditya Logo Philosophy" />
+       <img src="asset/logokanaditya.jpeg" alt="Kanaditya Logo Philosophy" />
     </div>
     <div class="philosophy-text-wrapper">
       <div class="philosophy-title">
@@ -933,7 +938,7 @@
       <div class="carousel-track">
         <div class="team-style-card">
           <div class="image-wrapper">
-            <img src="debbylukito.png" alt="Debby" />
+            <img src="asset/debbylukito.png" alt="Debby" />
           </div>
           <div class="line"></div>
           <h3>Debby Lukito</h3>
@@ -942,7 +947,7 @@
 
         <div class="team-style-card">
           <div class="image-wrapper">
-            <img src="agus.png" alt="Agus" />
+            <img src="asset/agus.png" alt="Agus" />
           </div>
           <div class="line"></div>
           <h3>Agus Sudarmanto</h3>
@@ -951,7 +956,7 @@
 
         <div class="team-style-card">
           <div class="image-wrapper">
-            <img src="retno.png" alt="Retno" />
+            <img src="asset/retno.png" alt="Retno" />
           </div>
           <div class="line"></div>
           <h3>Retno Utami</h3>
@@ -960,7 +965,7 @@
 
         <div class="team-style-card">
           <div class="image-wrapper">
-            <img src="indah (1).png" alt="Indah" />
+            <img src="asset/indah (1).png" alt="Indah" />
           </div>
           <div class="line"></div>
           <h3>Indah Nurdiana</h3>
@@ -969,7 +974,7 @@
 
         <div class="team-style-card">
           <div class="image-wrapper">
-            <img src="linda.png" alt="Linda" />
+            <img src="asset/linda.png" alt="Linda" />
           </div>
           <div class="line"></div>
           <h3>Linda Subrata</h3>
@@ -978,7 +983,7 @@
 
         <div class="team-style-card">
           <div class="image-wrapper">
-            <img src="jimmy.png" alt="jimmy" />
+            <img src="asset/jimmy.png" alt="jimmy" />
           </div>
           <div class="line"></div>
           <h3>Jimmy Khu</h3>
@@ -987,7 +992,7 @@
 
         <div class="team-style-card">
           <div class="image-wrapper">
-            <img src="agung.png" alt="agung" />
+            <img src="asset/agung.png" alt="agung" />
           </div>
           <div class="line"></div>
           <h3>Agung Dharmayasa</h3>
@@ -1016,7 +1021,7 @@
       focuses on activities that <span class="break">align with the Foundation’s Articles of Association and Bylaws, as follows:</span>
     </div>
     <div class="mission-sun">
-      <img src="sun.png" alt="Sun Icon"/>
+      <img src="asset/sun.png" alt="Sun Icon"/>
     </div>
 </section>
 
@@ -1053,7 +1058,7 @@
    
     <div class="social-item">
       <a href="https://wa.me/628155089388" target="_blank" aria-label="WhatsApp">
-        <img src="whatsapp-icon.png" alt="WhatsApp" />
+        <img src="Asset/whatsapp-icon.png" alt="WhatsApp" />
       </a>
       <p class="social-text">+62 815-5089-388</p>
     </div>
@@ -1061,7 +1066,7 @@
     
     <div class="social-item">
       <a href="https://instagram.com/komunitaskanaditya" target="_blank" aria-label="Instagram">
-        <img src="instagram-icon.png" alt="Instagram" />
+        <img src="Asset/instagram-icon.png" alt="Instagram" />
       </a>
       <p class="social-text">@komunitaskanaditya</p>
     </div>
@@ -1069,7 +1074,7 @@
   
     <div class="social-item">
       <a href="mailto:kanaditya.bali@gmail.com" target="_blank" aria-label="Email">
-        <img src="email-icon.png" alt="Email" />
+        <img src="Asset/email-icon.png" alt="Email" />
       </a>
       <p class="social-text">kanaditya.bali@gmail.com</p>
     </div>
@@ -1078,7 +1083,7 @@
   <hr class="footer-line" />
 
   <div class="footer-bottom">
-    <img src="logo.png" alt="Kanaditya Logo" class="footer-kanaditya-logo" />
+    <img src="Asset/logo.png" alt="Kanaditya Logo" class="footer-kanaditya-logo" />
     <p class="copyright">
       &copy; 2025 Kanaditya. All rights reserved.
     </p>

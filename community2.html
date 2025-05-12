@@ -46,7 +46,6 @@
       color: #7a562f;
       cursor: pointer;
     }
-
     
     nav ul {
       list-style: none;
@@ -195,6 +194,33 @@
       border-radius: 50px;
       font-size: 3.5rem;
       font-weight: bold;
+    }
+
+    .page-navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 60px 0;
+      gap: 30px;
+    }
+
+    .prev-button {
+      width: 48px;
+      height: 48px;
+      background-color: #a45b17;
+      color: white;
+      font-size: 1.3rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: background 0.3s ease;
+    }
+
+    .prev-button:hover {
+      background-color: #7a3d0f;
     }
 
     .next-button {
@@ -476,9 +502,11 @@
     }
 
     .container {
-      flex-direction: column;
+      /* flex-direction: column;
       align-items: flex-start;
-      gap: 10px;
+      gap: 10px; */
+      flex-direction: row;
+      align-items: center;
     }
 
     nav ul {
@@ -495,9 +523,9 @@
 
     .hamburger {
       display: block;
-      margin-left: auto;
-      order: 3;
       font-size: 28px;
+      order: 3;
+      margin-left: auto;
       background: none;
       border: none;
       color: #7a562f;
@@ -553,6 +581,7 @@
   </style>
 </head>
 <body>
+  <!-- Navbar -->
   <header>
     <div class="container">
       <div class="logo">
@@ -605,37 +634,24 @@
   <span>journey</span>
 </div>
 
-<a href="article1.html" class="news-card">
+<a href="article3.html" class="news-card">
   <div class="news-photo">
-    <img src="wulanvolunteertbnl.png" alt="News Photo" />
+    <img src="manik.jpeg" alt="News Photo" />
   </div>
   <div class="divider"></div>
   <div class="news-text">
-    <h2>Kindness, Crafts, and Cakes, Wulan's Lessons from Volunteering</h2>
+    <h2>Pengalaman Berharga Menjadi Volunteer di Kanaditya</h2>
     <p>
-      Wulan shared that joining Kanaditya was one of the best parts of her high school life, where she met kind and passionate people. She loved making crafts with children at a garbage dump site, and especially cherished a day making colorful steamed cakes with kids with Down syndrome. That experience opened her heart and changed how she sees others. She's grateful to be part of a caring community like Kanaditya that brings joy and meaning to simple moments.
+      Manik, salah satu volunteer Kanaditya, menceritakan pengalamannya mengikuti berbagai kegiatan yang penuh makna dan kebahagiaan. Ia belajar banyak hal, mulai dari membuat kerajinan tangan, membacakan dongeng, hingga berinteraksi dengan anak-anak istimewa. Kegiatan yang hangat dan menyenangkan ini juga memperluas relasinya dengan sesama relawan. Bagi Manik, menjadi volunteer di Kanaditya adalah pengalaman yang sangat berharga karena bisa berbagi ilmu dan kebahagiaan kepada orang lain.
     </p>
-    <span class="news-date">10 May 2025</span>
+    <span class="news-date">20 April 2025</span>
   </div>
 </a>
 
-<a href="article2.html" class="news-card">
-  <div class="news-photo">
-    <img src="desak.jpeg" alt="News Photo" />
-  </div>
-  <div class="divider"></div>
-  <div class="news-text">
-    <h2>“Menjadi relawan di Kanaditya mengajarkan saya arti memberi dengan hati”</h2>
-    <p>
-      Desak Made Diah Kumara Dewi menyampaikan bahwa melihat semangat anak-anak belajar di tengah keterbatasan membuatnya sadar bahwa kebahagiaan itu sederhana, cukup dengan kehadiran dan kepedulian. Meski datang untuk membantu, ia justru pulang dengan hati yang penuh syukur dan cinta.
-    </p>
-    <span class="news-date">10 May 2025</span>
-  </div>
-</a>
+<div class="page-navigation">
+  <a href="community.html" class="prev-button" aria-label="Previous Page">&#8592;</a>
+</div>
 
-<a href="community2.html" class="next-button" aria-label="Next Page">
-  &#8594;
-</a>
 
 <footer class="footer">
   <div class="social-icons">
@@ -684,5 +700,4 @@
     document.querySelector("nav ul").classList.toggle("show");
   });
 </script>
-
 </html>
