@@ -18,11 +18,10 @@
     }
 
     header {
-      height: 70px; 
+      padding: 20px 40px;
       background: #FEFDF2;
       display: flex;
       justify-content: center;
-      padding: 40px 40px 0 40px; 
     }
 
     .container {
@@ -30,19 +29,33 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      max-width: 1200px;
+      padding: 0 24px;
+      box-sizing: border-box;
+      position: relative;
     }
+
+
 
     .logo {
       display: flex;
       align-items: center;
       gap: 10px;
-    } 
-
-    .logo img {
-      height: 60px; 
     }
 
+    .logo img {
+      height: 60px;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 26px;
+      background: none;
+      border: none;
+      color: #7a562f;
+      cursor: pointer;
+    }
+
+    /* === NAV MENU === */
     nav ul {
       list-style: none;
       display: flex;
@@ -54,7 +67,7 @@
       color: #7a562f;
       font-weight: 600;
       transition: color 0.3s;
-    }   
+    }
 
     nav a.active,
     nav a:hover {
@@ -233,22 +246,6 @@
 
     .philosophy-text-wrapper {
       flex: 1;
-    }
-
-    @media (max-width: 768px) {
-      .philosophy-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-      }   
-
-    .philosophy-logo img {
-        margin-bottom: 20px;
-    }   
-
-      .philosophy-text {
-        text-align: justify;
-      }
     }
 
 
@@ -505,18 +502,6 @@
       }
     }
 
-
-    @media (max-width: 768px) {
-      .mission-sun {
-      top: 0;
-      right: 10px;
-      flex-direction: column;
-      text-align: center;
-      }
-
-    }
-
-
     .mission-title strong {
       font-weight: 700;
     }
@@ -664,8 +649,24 @@
 
   nav ul {
     flex-direction: column;
-    gap: 10px;
-    padding-left: 0;
+    display: none;
+    width: 100%;
+    background-color: #FEFDF2;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger { 
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #7a562f;
+    cursor: pointer;
   }
 
   nav li {
@@ -707,21 +708,37 @@
     margin-bottom: 20px;
   }
 
-  .philosophy-content {
-    padding: 40px 20px;
+    .philosophy-content {
+    padding: 20px;
     flex-direction: column;
+    align-items: center;
   }
 
   .philosophy-title {
-    margin: 0 auto 30px;
+    max-width: 90%;
+    margin: 0 auto 20px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .philosophy-title h3 {
+    font-size: 1.4rem;
+    text-align: center;
   }
 
   .philosophy-text {
-    margin: 0 10px;
+    margin: 0 auto;
+    max-width: 95%;
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1.8;
   }
 
   .philosophy-logo img {
-    margin: 20px auto;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 300px;
   }
 
   .carousel-track-container {
@@ -765,10 +782,12 @@
   }
 
   .mission-sun {
-    position: static;
-    margin-top: 20px;
+    top: 0;
+    right: 10px;
+    flex-direction: column;
+    text-align: center;
   }
-
+  
   .mission-sun img {
     width: 180px;
   }
@@ -783,35 +802,66 @@
     padding: 30px 20px;
   }
 
-  .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .social-icons {
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
   }
-}
+
+  .social-item img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social-text {
+    font-size: 13px;
+  }
+
+  .contact-heading {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .footer-line {
+    width: 80%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .footer-kanaditya-logo {
+    height: 40px;
+  }
+
+  footer p {
+    font-size: 12px;
+    text-align: center;
+  }
+} 
 
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="logo">
-        <img src="logo.png" alt="Kanaditya Logo" />
+      <div class="container">
+        <div class="logo">
+          <img src="logokanaditya.png" alt="Kanaditya Logo" />
+        </div>
+        <button class="hamburger">&#9776;</button> 
+        <nav class="navbar">
+          <ul>
+            <li><a href="Homepage.html" class="active">Home</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="volunteer.html">Join Volunteers</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul>
-          <li><a href="Homepage.html">Home</a></li>
-          <li><a href="community.html">Community</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="volunteer.html">Join Volunteers</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    </header>
 
   <div class="hero-wrapper">
     <section class="hero">
@@ -859,7 +909,7 @@
   <section class="philosophy-wrapper">
       <div class="philosophy-content">
       <div class="philosophy-logo">
-       <img src="logokanaditya.png" alt="Kanaditya Logo Philosophy" />
+       <img src="logokanaditya.jpeg" alt="Kanaditya Logo Philosophy" />
     </div>
     <div class="philosophy-text-wrapper">
       <div class="philosophy-title">
@@ -1085,6 +1135,10 @@
     window.addEventListener("resize", updateCarousel);
     updateCarousel();
   });
+
+document.querySelector(".hamburger").addEventListener("click", function () {
+  document.querySelector("nav ul").classList.toggle("show");
+});
 </script>
 </body>
 </html>

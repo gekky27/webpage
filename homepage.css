@@ -232,7 +232,7 @@ p {
   padding: 20px;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);  /* Menambahkan bayangan lebih tebal */
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -245,8 +245,8 @@ p {
 
 .gallery-item.small {
   margin-bottom: 0;
-  height: 200px; /* Menjaga ukuran tinggi foto kecil konsisten */
-  width: 100%;  /* Menjamin lebar foto kecil selalu mengisi kotak */
+  height: 200px; 
+  width: 100%;  
 }
 
 .image-box {
@@ -783,32 +783,39 @@ footer p {
 
    .upcoming-events-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
+    flex-direction: column; /* Stack text and image vertically */
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    gap: 20px; /* Space between the text and image */
+    text-align: center; /* Ensure text is centered */
+    padding: 40px 20px;
+  }
+
+  .upcoming-events-text {
+    max-width: 100%;
+    position: relative;
+    margin-right: 100px;
   }
 
   .upcoming-events-text h2 {
-    font-size: 1.4em;
-    margin-bottom: 12px;
+    font-size: 1.8em; /* Slightly smaller for smaller screens */
+    font-weight: 700;
+    margin-bottom: 20px;
   }
 
   .upcoming-events-text p {
-    font-size: 0.95em;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    font-size: 1em; /* Slightly larger text for better readability */
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #7A4720;
   }
 
-  .join-btn {
-    padding: 10px 24px;
-    font-size: 14px;
-  }
-
-   .upcoming-events-image {
+  .upcoming-events-image {
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center; 
+    position: relative;
+    margin-left: 90px;
   }
 
   .imagebox {
@@ -824,6 +831,7 @@ footer p {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    max-width: 350px; /* Ensures the image does not grow too large */
   }
 
   .social-icons {
@@ -915,6 +923,36 @@ footer p {
   .spenddonation-text p {
     font-size: 0.85em;
   }
+
+   .upcoming-events-container {
+    padding: 20px 10px; /* Reduce padding on very small screens */
+  }
+
+  .upcoming-events-text {
+    padding: 0 10px; /* Padding to keep the text from touching the edges */
+  }
+
+  .upcoming-events-text h2 {
+    font-size: 1.5em; /* Smaller text for small screens */
+    margin-bottom: 15px;
+  }
+
+  .upcoming-events-text p {
+    font-size: 0.95em; /* Slightly smaller text */
+    margin-bottom: 20px;
+  }
+
+  .upcoming-events-image {
+    width: 150%;
+    padding: 0 10px; /* Padding to prevent the image from stretching too much */
+  }
+
+  .imagebox img {
+    width: 100%; /* Make sure the image fits inside the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  
 
 
 }

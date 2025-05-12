@@ -6,9 +6,9 @@ document.querySelector(".hamburger").addEventListener("click", function () {
 
 
 // Fungsi untuk tombol Donate
-document.getElementById("donateBtn").addEventListener("click", function() {
-  window.location.href = "index.html";
-});
+document.getElementById("donateBtn").addEventListener("click", function () {
+    window.location.href = "index.html"; // Ganti ke URL donasi yang sebenarnya jika ada
+  });
   
   // Fungsi untuk semua tombol Learn More
   document.querySelectorAll(".card button").forEach(function (button) {
@@ -24,13 +24,14 @@ document.getElementById("donateBtn").addEventListener("click", function() {
 // JavaScript for play button functionality
 document.querySelectorAll(".play-button").forEach(function (button) {
   button.addEventListener("click", function () {
-    window.open("https://drive.google.com/file/d/1PqSdzpmdSryG73dbKaDWzz4Ms_I-ompP/preview", "_blank");
+    window.open("https://drive.google.com/file/d/1SJmoRbMEXVCGK1kGjDUuyiCODdAoyO_0/preview", "_blank");
   });
 });
 
 
 document.querySelectorAll(".join-btn").forEach(function (button) {
   button.addEventListener("click", function () {
-      window.location.href = "volunteer.html"; 
+      window.location.href = "volunteer.html"; // Ganti ke halaman yang diinginkan
   });
 });
+

@@ -4,15 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kanaditya - Be a Light</title>
-  <link rel="icon" type="image/png" href="Asset/logo.png" />
+  <link rel="icon" type="image/png" href="logo.png" />
   <link rel="stylesheet" href="contact-us.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-  
+  <!-- Popup Modal -->
+  <div id="popupModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closePopup()">&#10006;</span> <!-- Updated Close Button -->
+      <p>Thank you for contacting us! We will reply to you shortly.</p>
+    </div>
+  </div>
+
 </head>
 <body>
-
   <header>
     <div class="container">
       <div class="logo">
@@ -23,15 +29,15 @@
         <ul>
           <li><a href="Homepage.html">Home</a></li>
           <li><a href="community.html">Community</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="about-us.html">About Us</a></li>
           <li><a href="volunteer.html">Join Volunteers</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
   <section class="contact-section">
     <div class="contact-container">
+      <!-- Left Column -->
       <div class="contact-left">
         <p class="contact-label">CONNECT WITH US</p>
         <h1>We'd love to hear<br>from you</h1>
@@ -40,6 +46,7 @@
         </p>
       </div>
 
+      <!-- Right Column -->
       <div class="contact-right">
         <div class="contact-block">
           <h3>Let's talk!</h3>
@@ -69,7 +76,7 @@
   </section>
 
   <section class="contact-form-section">
-    <form class="contact-form" id="contactForm" onsubmit="return showPopup();">
+    <form class="contact-form" id="contactForm">
       <div class="form-row">
         <input type="text" placeholder="First Name" required>
         <input type="text" placeholder="Last Name" required>
@@ -79,7 +86,7 @@
         <input type="text" placeholder="Subject" required>
       </div>
       <textarea placeholder="Your Wish" rows="5" required></textarea>
-      <button id="submit">Send message</button>
+      <button id="submit" type="submit">Send message</button>
     </form>
   </section>
 
@@ -88,21 +95,18 @@
       <div class="social-item">
         <a href="contact-us.html" class="contact-heading">Connect with Us</a>
       </div>
-
       <div class="social-item">
         <a href="https://wa.me/628155089388" target="_blank" aria-label="WhatsApp">
           <img src="whatsapp-icon.png" alt="WhatsApp" />
         </a>
         <p class="social-text">+62 815-5089-388</p>
       </div>
-
       <div class="social-item">
         <a href="https://instagram.com/komunitaskanaditya" target="_blank" aria-label="Instagram">
           <img src="instagram-icon.png" alt="Instagram" />
         </a>
         <p class="social-text">@komunitaskanaditya</p>
       </div>
-
       <div class="social-item">
         <a href="mailto:kanaditya.bali@gmail.com" target="_blank" aria-label="Email">
           <img src="email-icon.png" alt="Email" />
@@ -121,30 +125,33 @@
     </div>
   </footer>
 
-  <div id="popupModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closePopup()">&times;</span>
-      <p>Thank you for connecting with us,<br>we will reply to you shortly.</p>
-    </div>
-  </div>
-
   <script>
+
+    document.querySelector(".hamburger").addEventListener("click", function () {
+      document.querySelector("nav ul").classList.toggle("show");
+    });
+    // Add event listener to form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();  // Prevent form from submitting and reloading the page
+      showPopup();  // Show the popup when the form is submitted
+      this.reset(); // Reset the form
+    });
+
+    // Function to show popup
     function showPopup() {
       const modal = document.getElementById("popupModal");
-      modal.style.display = "flex";
+      modal.style.display = "flex";  // Show the modal
 
-      // Auto-close after 3 seconds
+      // Auto-close after 3 seconds (optional)
       setTimeout(() => {
-        closePopup();
+        closePopup();  // Close the popup after 3 seconds
       }, 3000);
-
-      return false; // Prevent actual form submission
     }
 
+    // Function to close the popup
     function closePopup() {
       const modal = document.getElementById("popupModal");
-      modal.style.display = "none";
-      document.getElementById("contactForm").reset();
+      modal.style.display = "none";  // Hide the popup
     }
   </script>
 </body>
