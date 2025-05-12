@@ -1,19 +1,22 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #FEFDF2;
-  color: #7A4720;
-  line-height: 1.6;
+/* HEADER */
+* {
   margin: 0;
+  margin-bottom: 10px;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* HEADER */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #FEFDF2;
+  color: #000000;
+}
+
 header {
-  height: 70px;
+  padding: 20px 40px;
   background: #FEFDF2;
   display: flex;
   justify-content: center;
-  padding: 40px 40px 0 40px;
 }
 
 .container {
@@ -21,7 +24,9 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .logo {
@@ -34,6 +39,16 @@ header {
   height: 60px;
 }
 
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #7a562f;
+  cursor: pointer;
+}
+
+/* === NAV MENU === */
 nav ul {
   list-style: none;
   display: flex;
@@ -51,7 +66,8 @@ nav a.active,
 nav a:hover {
   color: #e85d04;
 }
-/* TITLE SECTION */
+
+/* === TITLE SECTION === */
 .title-section {
   background-color: #FEFDF2;
   padding: 40px;
@@ -79,9 +95,10 @@ nav a:hover {
   cursor: pointer;
   padding: 4px 6px;
   transition: background 0.2s;
-  margin-bottom: 4px; /* naikkan sedikit tombol ke atas */
+  margin-bottom: 4px; 
+  position: relative;
+  bottom: 50px;
 }
-
 
 .title {
   font-size: 3em;
@@ -98,9 +115,40 @@ nav a:hover {
 .title-right img {
   max-height: 250px;
   object-fit: contain;
+  width: 100%;
 }
 
+@media (max-width: 768px) {
+  .title-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .title-left {
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .title-right img {
+    max-height: 140px;
+    margin-top: 20px;
+  }
+
+  .back-button {
+    font-size: 20px;
+    position: static;  /* Resetting position for smaller screens */
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 2em;  /* Reduce font size for smaller screens */
+  }
+
+  .subtitle {
+    font-size: 1.1em;  /* Adjust subtitle font size */
+  }
+}
 
 /* ABOUT SECTION */
 .about-program {
@@ -111,12 +159,11 @@ nav a:hover {
 
 .about-program h2 {
   font-size: 2em;
-  margin-bottom: 20px; /* dikurangi dari sebelumnya 35px */
+  margin-bottom: 20px;
   color: #000;
   letter-spacing: 2px;
-  margin-top: -10px; /* tambahan agar judul lebih naik */
+  margin-top: -10px;
 }
-
 
 .about-gallery {
   display: flex;
@@ -134,17 +181,14 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px; /* Tambahan margin antar item */
+  margin: 10px;
 }
-
-
 
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* atau use cover, jika mau penuh */
+  object-fit: contain;
   aspect-ratio: 4 / 3;
-
 }
 
 .about-description {
@@ -157,7 +201,6 @@ nav a:hover {
   text-align: center;
 }
 
-/* SPACER */
 .section-spacer {
   background-color: #FEFDF2;
   height: 50px;
@@ -182,12 +225,10 @@ nav a:hover {
   display: inline-block;
 }
 
-
 .contact-heading:hover {
   color: #5c3016;
   text-decoration: underline;
 }
-
 
 .social-icons {
   display: flex;
@@ -216,7 +257,6 @@ nav a:hover {
   margin: 0;
 }
 
-
 .footer-line {
   border: none;
   height: 1px;
@@ -224,7 +264,6 @@ nav a:hover {
   width: 50%;
   margin: 10px auto;
 }
-
 
 .footer-bottom {
   display: flex;
@@ -248,7 +287,48 @@ footer p {
   margin: 0;
   line-height: 1;
 }
+
 @media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    margin-left: 150px;
+  }
+
+  .logo {
+    position: relative;
+    margin-top: 5px;
+    margin-right: 20px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #FEFDF2;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 20px;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+    gap: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    text-align: left;
+  }
   .title-flex {
     flex-direction: column;
     text-align: center;
@@ -262,5 +342,45 @@ footer p {
   .title-right img {
     max-height: 140px;
     margin-top: 20px;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+
+  .social-item img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .social-text {
+    font-size: 13px;
+  }
+
+  .contact-heading {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .footer-line {
+    width: 80%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .footer-kanaditya-logo {
+    height: 40px;
+  }
+
+  footer p {
+    font-size: 12px;
+    text-align: center;
   }
 }

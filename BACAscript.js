@@ -1,3 +1,7 @@
+document.querySelector(".hamburger").addEventListener("click", function () {
+  document.querySelector("nav ul").classList.toggle("show");
+});
+
 // Menambahkan event listener untuk tombol back
 document.querySelector('.back-arrow').addEventListener('click', function(event) {
   event.preventDefault();  // Mencegah default behavior dari link

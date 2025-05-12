@@ -1,235 +1,253 @@
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fffaf0;
-      color: #4e2e1f;
-    }
+/* Reset & base styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffaf0;
+  color: #4e2e1f;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-    }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-    }
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
 
-    .nav-links a {
-      margin-left: 30px;
-      text-decoration: none;
-      color: #4e2e1f;
-      font-weight: 700;
-    }
+.logo img {
+  height: 80px;
+}
 
-    .main-banner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 60px 40px;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+/* Nav */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
 
-    .main-banner .left {
-      max-width: 450px;
-      flex: 1;
-    }
+.nav-links a {
+  text-decoration: none;
+  color: #4e2e1f;
+  font-weight: 700;
+}
 
-    .back-arrow {
-        font-size: 32px; /* 60% larger */
-        text-decoration: none;
-        color: #4e2e1f;
-        font-weight: bold;
-        display: inline-block;
-        margin-bottom: 10px;
-        transition: transform 0.2s ease;
-      }
-      
-      .back-arrow:hover {
-        transform: scale(1.2);
-      }
-      
-      
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #4e2e1f;
+}
 
-    .main-banner h1 {
-      font-size: 64px;
-      font-weight: 800;
-      line-height: 1.2;
-    }
+/* Banner Section */
+.main-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
-    
+.main-banner .left {
+  flex: 1;
+  min-width: 280px;
+}
 
-    .main-banner .right img {
-      width: 100%;
-      max-width: 450px;
-      height: auto;
-    }
+.main-banner h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
 
-    .about-section {
-      background-color: #F5B93B;
-      padding: 60px 40px 100px 40px;
-      color: #4e2e1f;
-    }
+.back-arrow {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #4e2e1f;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+}
 
-    .about-section h2 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
+.back-arrow:hover {
+  transform: scale(1.2);
+}
 
-    .about-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
+.main-banner .right {
+  flex: 1;
+  min-width: 280px;
+}
 
-    .about-image {
-      flex: 1;
-      min-width: 250px;
-      background-color: #fdf8ee;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 250px;
-      box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
-    }
+/* About Section */
+.about-section {
+  background-color: #F5B93B;
+  padding: 60px 20px 100px;
+  color: #4e2e1f;
+}
 
-    .about-text {
-      flex: 2;
-      min-width: 300px;
-      font-size: 16px;
-    }
+.about-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-    .gallery {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
 
-    .gallery-box {
-      background-color: #fdf8ee;
-      flex: 1;
-      min-width: 120px;
-      height: 240px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
-    }
+.about-image {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fdf8ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
 
-    .spacer-section {
-        background-color: #FFFAEE;
-        height: 180px; /* Adjust height as needed */
-        width: 100%;
-    }
+.about-text {
+  flex: 2;
+  min-width: 280px;
+  font-size: 1rem;
+}
 
-    footer {
-      background-color: #F5B93B;
-      color: #5C3B1C;
-      padding: 20px 10px 5px;
-      text-align: center;
-      font-size: 13px;
-    }
-    
-    .footer .social-icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      margin-bottom: 10px;
-    }
-    
-    .footer .social-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      line-height: 1.3;
-    }
-    
-    .footer .social-item img {
-      width: 24px;
-      height: 24px;
-      margin-bottom: 4px;
-    }
-    
-    .footer .contact-heading {
-      width: 100%;
-      font-weight: bold;
-      font-size: 15px;
-      margin-bottom: 15px;
-      color: inherit;
-    }
-    
-    .footer .social-text {
-      font-size: 13px;
-      margin: 0;
-    }
-    
-    .footer-line {
-      border: none;
-      border-top: 1px solid #C88A2F;
-      margin: 0 auto 8px;
-      width: 50%;
-    }
-    
-    .footer-bottom {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      margin-top: 10px;
-      font-size: 13px;
-      flex-wrap: wrap;
-    }
-    
-    .footer-kanaditya-logo {
-      width: 80px;
-      height: auto;
-    }
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
 
-    .menu-toggle {
-      display: none;
-      font-size: 30px;
-      cursor: pointer;
-      color: #4e2e1f;
-    }
-    
-    /* Default nav links */
-    .nav-links {
-      display: flex;
-      gap: 30px;
-    }
-    
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-    
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #fffaf0;
-        position: absolute;
-        top: 80px;
-        right: 40px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        z-index: 1000;
-      }
-    
-      .nav-links.active {
-        display: flex;
-      }
-    
-      .nav-links a {
-        margin: 10px 0;
-        font-size: 16px;
-      }
-    }
-    
+.gallery-box {
+  background-color: #fdf8ee;
+  flex: 1 1 300px;
+  height: auto;
+  padding: 10px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+
+/* Spacer */
+.spacer-section {
+  background-color: #FFFAEE;
+  height: 120px;
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: #F5B93B;
+  color: #5C3B1C;
+  padding: 20px 10px 5px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.footer .social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+
+.footer .social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .social-item img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.contact-heading {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: inherit;
+}
+
+.footer-line {
+  border: none;
+  border-top: 1px solid #C88A2F;
+  margin: 0 auto 8px;
+  width: 50%;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+.footer-kanaditya-logo {
+  width: 60px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fffaf0;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .main-banner {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .main-banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-section {
+    padding: 40px 20px;
+  }
+
+  .gallery-box {
+    flex: 1 1 90%;
+  }
+
+  .about-image,
+  .about-text {
+    flex: 1 1 100%;
+  }
+}

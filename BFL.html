@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book For Love</title>
   <link rel="stylesheet" href="BFL.css" />
 
@@ -9,13 +10,8 @@
 <body>
 
   <header>
-    <img src="logokanaditya.png" alt="Kanadiya Logo">
-  
-    <div class="hamburger" id="hamburger">
-      &#9776;
-    </div>
-    
-    <!-- Navigation menu (FIXED) -->
+    <img src="logokanaditya.png" alt="Kanaditya Logo" />
+    <div class="hamburger" id="hamburger">&#9776;</div>
     <nav class="menu" id="navMenu">
       <a href="Homepage.html">Home</a>
       <a href="community.html">Community</a>
@@ -24,91 +20,81 @@
     </nav>
   </header>
 
-<div class="back-arrow">
+  <div class="back-arrow">
     <a href="Homepage.html" class="back-arrow">&larr;</a>
   </div>
 
-<section class="banner">
-  <div>
-    <h1>Book<br>For<br>Love</h1>
-  </div>
-  <img src="stack.png" alt="Stack of Books" style="width:350px;height: 380px;"> 
-</section>
+  <section class="banner">
+    <div>
+      <h1>Book<br>For<br>Love</h1>
+    </div>
+    <img src="stack.png" alt="Stack of Books" />
+  </section>
 
-<section class="about-section">
-  <h2>About Program</h2>
+  <section class="about-section">
+    <h2>About Program</h2>
 
-  <div class="about-entry">
-    <img src="lit4.jpeg" alt="book 1">
-    <p>
+    <div class="about-entry">
+      <img src="lit4.jpeg" alt="book 1" />
+      <p>
         Book For Love is a literacy outreach program that aims to foster a love for reading among children in underserved communities. Through storytelling sessions, reading games, and educational support, we create safe spaces where young minds can explore books and build their imagination.
-    </p>
-  </div>
+      </p>
+    </div>
 
-  <div class="about-entry">
-    <img src="lit5.jpeg" alt="book 2">
-    <p>
+    <div class="about-entry">
+      <img src="lit5.jpeg" alt="book 2" />
+      <p>
         This program thrives through collaboration with volunteers and local libraries, bringing people together to inspire the joy of learning. Our team organizes monthly reading events, book donations, and interactive sessions that not only educate but also build meaningful connections within the community.
-    </p>
-  </div>
-</section>
+      </p>
+    </div>
+  </section>
 
-<footer class="footer">
-  <div class="social-icons">
-    
-    <div class="social-item">
-      <a href="contact-us.html" class="contact-heading">Connect with Us</a>
+  <footer class="footer">
+    <div class="social-icons">
+      <div class="social-item">
+        <a href="contact-us.html" class="contact-heading">Connect with Us</a>
+      </div>
+      <div class="social-item">
+        <a href="https://wa.me/628155089388" target="_blank" aria-label="WhatsApp">
+          <img src="whatsapp-icon.png" alt="WhatsApp" />
+        </a>
+        <p class="social-text">+62 815-5089-388</p>
+      </div>
+      <div class="social-item">
+        <a href="https://instagram.com/komunitaskanaditya" target="_blank" aria-label="Instagram">
+          <img src="instagram-icon.png" alt="Instagram" />
+        </a>
+        <p class="social-text">@komunitaskanaditya</p>
+      </div>
+      <div class="social-item">
+        <a href="mailto:kanaditya.bali@gmail.com" target="_blank" aria-label="Email">
+          <img src="email-icon.png" alt="Email" />
+        </a>
+        <p class="social-text">kanaditya.bali@gmail.com</p>
+      </div>
     </div>
 
-   
-    <div class="social-item">
-      <a href="https://wa.me/628155089388" target="_blank" aria-label="WhatsApp">
-        <img src="whatsapp-icon.png" alt="WhatsApp" />
-      </a>
-      <p class="social-text">+62 815-5089-388</p>
+    <hr class="footer-line" />
+
+    <div class="footer-bottom">
+      <img src="logokanaditya.png" alt="Kanaditya Logo" class="footer-kanaditya-logo" />
+      <p>&copy; 2025 Kanaditya. All rights reserved.</p>
     </div>
+  </footer>
 
-    
-    <div class="social-item">
-      <a href="https://instagram.com/komunitaskanaditya" target="_blank" aria-label="Instagram">
-        <img src="instagram-icon.png" alt="Instagram" />
-      </a>
-      <p class="social-text">@komunitaskanaditya</p>
-    </div>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
 
-  
-    <div class="social-item">
-      <a href="mailto:kanaditya.bali@gmail.com" target="_blank" aria-label="Email">
-        <img src="email-icon.png" alt="Email" />
-      </a>
-      <p class="social-text">kanaditya.bali@gmail.com</p>
-    </div>
-  </div>
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
 
-  <hr class="footer-line" />
-
-  <div class="footer-bottom">
-    <img src="logokanaditya.png" alt="Kanaditya Logo" class="footer-kanaditya-logo" />
-    <p class="copyright">
-      &copy; 2025 Kanaditya. All rights reserved.
-    </p>
-  </div>
-</footer>
-
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("navMenu");
-  hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-  });
-
-  // Optional: Close menu when clicking outside
-  document.addEventListener("click", (event) => {
-    if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-      navMenu.classList.remove("show");
-    }
-  });
-</script>
-
+    document.addEventListener("click", (event) => {
+      if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+        navMenu.classList.remove("show");
+      }
+    });
+  </script>
 </body>
 </html>
