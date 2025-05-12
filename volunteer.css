@@ -31,7 +31,7 @@ a {
 }
 
 .logo img {
-  height: 100px;
+  height: 60px;
 }
 
 .hamburger {
@@ -39,6 +39,10 @@ a {
   color: #5C3B1C;
   cursor: pointer;
   display: none;
+}
+
+.navbar .hamburger {
+  margin-left: auto; /* pushes it to the right */
 }
 
 .nav-links {
@@ -318,6 +322,7 @@ footer {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    margin-left: auto;
   }
 
   .nav-links {
@@ -327,8 +332,9 @@ footer {
     top: 60px;
     left: 0;
     right: 0;
-    background-color: #5C3B1C;
+    background-color: #FFFAEE; /* cream white background */
     padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.show {

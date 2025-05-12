@@ -8,15 +8,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <div class="container header-inner">
       <div class="logo">
         <img src="logokanaditya.png" alt="Kanaditya Logo" />
       </div>
-      <nav>
+      <button class="hamburger">&#9776;</button>
+      <nav class="navbar">
         <ul>
-          <li><a href="Homepage.html">Home</a></li>
-          <li><a href="community.html">Community</a></li>
+          <li><a href="Homepage.html" >Home</a></li>
+          <li><a href="comMunity.html">Community</a></li>
           <li><a href="aboutus.html">About Us</a></li>
           <li><a href="volunteer.html">Join Volunteers</a></li>
         </ul>
@@ -25,13 +27,14 @@
   </header>
 
   <div class="container">
-    <button class="back-arrow" onclick="goBack()" aria-label="Go back">←</button>
+    <div class="back-button">←</div>
+
     <div class="main-section">
       <div class="main-text">
         <h1>Covid<br>19<br>Care</h1>
       </div>
       <div class="main-image">
-        <img src="covid-illustration.png" alt="Covid Care" style="width: 250px;">
+        <img src="covid-illustration.png" alt="Covid Care">
       </div>
     </div>
 
@@ -41,46 +44,62 @@
         <div><img src="image 1.jpg" alt="Activity 1" /></div>
         <div><img src="image 2.jpg" alt="Activity 2" /></div>
         <div><img src="image 3.jpg" alt="Activity 3" /></div>
-       </div>
+      </div>
       <p class="program-text">
-        This program is an initiative to help communities affected by the Covid-19 pandemic, which began in March 2020. Its main activities include distributing basic necessities, personal protective equipment, masks, and food and vitamins for health workers in various public service facilities in Bali. This program also reaches vulnerable communities such as victims of layoffs, scavengers, families of children of laborers and those with special needs, to taking to the streets to distribute direct assistance.
+       The ‘Covid-19 Care’ program is an initiative since March 2020 to help communities affected by the pandemic in Bali. Its main activities include distributing basic necessities, personal protective equipment, masks, and providing food and vitamins to health workers in hospitals, health centers, and village offices. This program also targets victims of layoffs, scavengers, laborers’ families, children with special needs, and distributing direct assistance to the streets for informal workers such as garbage collectors and street vendors.
       </p>
     </section>
   </div>
 
   <footer class="footer">
-    <div class="container">
-      <div class="social-icons">
-        <div class="social-item">
-          <a href="contact-us.html" class="contact-heading">Connect with Us</a>
-        </div>
-        <div class="social-item">
-          <a href="https://wa.me/628155089388" target="_blank" aria-label="WhatsApp">
-            <img src="whatsapp-icon.png" alt="WhatsApp" />
-          </a>
-          <p class="social-text">+62 815-5089-388</p>
-        </div>
-        <div class="social-item">
-          <a href="https://instagram.com/komunitaskanaditya" target="_blank" aria-label="Instagram">
-            <img src="instagram-icon.png" alt="Instagram" />
-          </a>
-          <p class="social-text">@komunitaskanaditya</p>
-        </div>
-        <div class="social-item">
-          <a href="mailto:kanaditya.bali@gmail.com" target="_blank" aria-label="Email">
-            <img src="email-icon.png" alt="Email" />
-          </a>
-          <p class="social-text">kanaditya.bali@gmail.com</p>
-        </div>
+  <div class="container">
+    <div class="social-icons">
+      <div class="social-item">
+        <a href="contact-us.html" class="contact-heading">Connect with Us</a>
       </div>
-      <hr class="footer-line" />
-      <div class="footer-bottom">
-        <img src="logo.png" alt="Kanaditya Logo" class="footer-kanaditya-logo" />
-        <p class="copyright">&copy; 2025 Kanaditya. All rights reserved.</p>
+      <div class="social-item">
+        <a href="https://wa.me/628155089388" target="_blank" aria-label="WhatsApp">
+          <img src="whatsapp-icon.png" alt="WhatsApp" />
+        </a>
+        <p class="social-text">+62 815-5089-388</p>
+      </div>
+      <div class="social-item">
+        <a href="https://instagram.com/komunitaskanaditya" target="_blank" aria-label="Instagram">
+          <img src="instagram-icon.png" alt="Instagram" />
+        </a>
+        <p class="social-text">@komunitaskanaditya</p>
+      </div>
+      <div class="social-item">
+        <a href="mailto:kanaditya.bali@gmail.com" target="_blank" aria-label="Email">
+          <img src="email-icon.png" alt="Email" />
+        </a>
+        <p class="social-text">kanaditya.bali@gmail.com</p>
       </div>
     </div>
-  </footer>
+    <hr class="footer-line" />
+    <div class="footer-bottom">
+      <img src="logo.png" alt="Kanaditya Logo" class="footer-kanaditya-logo" />
+      <p class="copyright">&copy; 2025 Kanaditya. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 
-  <script src="COVIDscript.js"></script>
+
+  <!-- ✅ HAMBURGER SCRIPT -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar ul");
+
+    if (hamburger && navMenu) {
+      hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
+      });
+    } else {
+      console.warn("Hamburger or navMenu not found.");
+    }
+  });
+</script>
+
 </body>
 </html>
