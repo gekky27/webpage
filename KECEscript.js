@@ -3,7 +3,7 @@
 
 // Example: Smooth scroll to top or back navigation could be added here
 
-document.querySelector('.back-arrow')?.addEventListener('click', function (e) {
+document.querySelector('.back-button')?.addEventListener('click', function (e) {
   e.preventDefault();
   history.back();
 });

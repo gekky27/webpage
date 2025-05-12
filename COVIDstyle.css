@@ -122,6 +122,11 @@ nav a:hover {
   margin-top: 20px;
 }
 
+.back-arrow:hover {
+  color: #e85d04;
+  text-decoration: underline;
+}
+
 .footer {
   background-color: #FCB729;
   padding: 20px 0 15px;
