@@ -11,10 +11,12 @@
   <header>
     <img src="logokanaditya.png" alt="Kanadiya Logo">
   
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburger">&#9776;</label>
-  
-    <nav class="menu">
+    <div class="hamburger" id="hamburger">
+      &#9776;
+    </div>
+    
+    <!-- Navigation menu (FIXED) -->
+    <nav class="menu" id="navMenu">
       <a href="Homepage.html">Home</a>
       <a href="community.html">Community</a>
       <a href="aboutus.html">About Us</a>
@@ -92,6 +94,21 @@
     </p>
   </div>
 </footer>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+
+  // Optional: Close menu when clicking outside
+  document.addEventListener("click", (event) => {
+    if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+      navMenu.classList.remove("show");
+    }
+  });
+</script>
 
 </body>
 </html>
